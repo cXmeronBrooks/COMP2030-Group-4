@@ -110,3 +110,106 @@ body {
   .metric img {
     width: 100%;
   }
+
+
+/* database */
+.free {
+    background-color: #FFCCCC;
+  }
+
+.busy {
+    background-color: #05f451;
+}
+body {
+    margin: 15px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Heading styling */
+h1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Task list items */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    line-height: 1.5em;
+}
+
+/* Menu styling */
+#menu {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+#menu li {
+    display: inline;
+}
+
+#menu a {
+    color: black;
+    margin-right: 15px;
+    text-decoration: none;
+    float: left;
+}
+
+/* Hover effect on menu items */
+#menu a:hover {
+    color: #1565c0;
+}
+
+/* Selected menu item styling */
+#menu a.selected {
+    color: #1565c0;
+    font-weight: bold;
+}
+
+input{
+    display: block;
+    border: 1px solid #babdbe;
+    padding: 3px 6px; 
+    margin-bottom: 10px;
+}
+
+
+input[type="text"]{
+    width: 300px;
+}
+
+input[type="submit"] {
+    cursor: pointer; 
+    background-color: #2068b5; 
+    color: white; 
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px; 
+}
+
+input[type="submit"]:hover {
+    color: #000000;
+}
+.task-link {
+    color: black;
+    text-decoration: none;
+}
+
+.task-link:hover {
+    color: #1565c0;
+    text-decoration: line-through;
+}
+
+.history {
+    color: #9e9e9e;
+    text-decoration: line-through;
+}
+/* database */
