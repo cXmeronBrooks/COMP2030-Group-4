@@ -8,7 +8,7 @@ function ShowPassword() {
     }
 }
 
-// Function to handle the form submission
+// Function to handle form submission
 function handleSubmit() {
     const password = document.getElementById("password").value;
     const username = document.getElementById("username").value;
@@ -18,18 +18,10 @@ function handleSubmit() {
         return;
     }
 
-    const saltRounds = 10;
+    // Hashing the password using CryptoJS
+    const hashedPassword = CryptoJS.SHA256(password).toString();
 
-    // Hashing the password using bcrypt
-    bcrypt.genSalt(saltRounds, function(err, salt) {
-        bcrypt.hash(password, salt, function(err, hash) {
-            if (err) {
-                console.error("Error hashing password:", err);
-                return;
-            }
-
-            // You can now send the hashed password to your server
-            console.log("Hashed Password:", hash);
-        });
-    });
+    // You can now send the hashed password to your server
+    console.log("Hashed Password:", hashedPassword);
+    alert("Password hashed successfully: " + hashedPassword);
 }
