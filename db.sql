@@ -22,6 +22,11 @@ CREATE TABLE users(
     hashPass VARCHAR(100)
 ) AUTO_INCREMENT=1;
 
+CREATE TABLE jobs(
+    jobID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100)
+)AUTO_INCREMENT =1;
+
 CREATE USER IF NOT EXISTS 'dbadmin'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON Manufacturing.* TO 'dbadmin'@'localhost';
 FLUSH PRIVILEGES;
@@ -32,6 +37,10 @@ INSERT INTO StaffLists (name) VALUES ('Omar Ali');
 INSERT INTO StaffLists (name) VALUES ('Zihan Wang');
 INSERT INTO StaffLists (name) VALUES ('Aarav Devi');
 
-INSERT INTO users(UserName) VALUES ('worker123');
 INSERT INTO users (UserName, hashPass) VALUES ('manager', 'apple');
 INSERT INTO users(UserName, hashPass) VALUES ('worker', 'ilikemoney');
+
+INSERT INTO jobs(name) VALUES ("Fix the assembly belt");
+INSERT INTO jobs(name) VALUES ("Manufacture 100 gears");
+INSERT INTO jobs(name) VALUES ("Clean the factory floor");
+INSERT INTO jobs(name) VALUES ("Buy 2000kg copper");
