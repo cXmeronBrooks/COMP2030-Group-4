@@ -1,51 +1,172 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Manufacturing Dashboard</title>
         <meta charset="UTF-8">
-    <meta name="author" content="Group 4: Broo0488, [add your FANS]">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "style.css">
+        <meta name="author" content="Group 4: Broo0488, [add your FANS]">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manufacturing Dashboard</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f5f5f5;
+            }
+            header {
+                background-color: #333;
+                color: white;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            nav ul li {
+                display: inline;
+                margin-right: 20px;
+            }
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .user img {
+                width: 40px;
+                border-radius: 50%;
+            }
+            main {
+                padding: 20px;
+            }
+            .search input {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            .metrics {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .metric {
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            .metric img {
+                width: 100px;
+                margin-top: 10px;
+            }
+            .csv-data-table {
+                width: 100%;
+                margin-top: 20px;
+                border-collapse: collapse;
+            }
+            .csv-data-table th, .csv-data-table td {
+                border: 1px solid #ccc;
+                padding: 8px;
+                text-align: center;
+            }
+            .csv-data-table th {
+                background-color: #333;
+                color: white;
+            }
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+        </style>
     </head>
     <body>
         <header>
-          <h1>Manufacturing</h1>
-          <nav>
-            <ul>
-              <li><a href="#">Machines</a></li>
-              <li><a href="#">Jobs</a></li>
-              <li><a href="#">Settings</a></li>
-            </ul>
-          </nav>
-          <div class="user">
-            <img src="person-icon.png" alt="User">
-          </div>
+            <h1>Manufacturing Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Machines</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+            <div class="user">
+                <img src="person-icon.png" alt="User Icon">
+            </div>
         </header>
       
         <main>
-          <section class="search">
-            <input type="text" placeholder="Search">
-          </section>
+            <section class="search">
+                <input type="text" placeholder="Search">
+            </section>
       
-          <section class="metrics">
-            <div class="metric">
-              <h2>Key Metric 1</h2>
-              <img src="image.png" alt="Image 1">
-            </div>
-            <div class="metric">
-              <h2>Key Metric 2</h2>
-              <img src="image2.png" alt="Image 2">
-            </div>
-            <div class="metric">
-              <h2>Key Metric 3</h2>
-              <img src="image3.png" alt="Image 3">
-            </div>
-            <div class="metric">
-              <h2>Key Metric 4</h2>
-              <img src="image4.png" alt="Image 4">
-            </div>
-          </section>
+            <section class="metrics">
+                <div class="metric">
+                    <h2>Production Rate</h2>
+                    <img src="image.png" alt="Production Rate">
+                    <p>150 units/hour</p>
+                </div>
+                <div class="metric">
+                    <h2>Machine Uptime</h2>
+                    <img src="image2.png" alt="Machine Uptime">
+                    <p>95%</p>
+                </div>
+                <div class="metric">
+                    <h2>Energy Consumption</h2>
+                    <img src="image3.png" alt="Energy Consumption">
+                    <p>120 kWh</p>
+                </div>
+                <div class="metric">
+                    <h2>System Alerts</h2>
+                    <img src="image4.png" alt="System Alerts">
+                    <p>No alerts</p>
+                </div>
+            </section>
+
+            <!-- CSV Data Table -->
+            <section class="csv-data">
+                <h2>Factory Logs</h2>
+                <table class="csv-data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Machine ID</th>
+                            <th>Operation Status</th>
+                            <th>Production Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        // Output CSV data
+                        if (!empty($csv_data)) {
+                            foreach ($csv_data as $row) {
+                                echo "<tr>";
+                                foreach ($row as $cell) {
+                                    echo "<td>" . htmlspecialchars($cell) . "</td>";
+                                }
+                                echo "</tr>";
+                            }
+                        }
+                        ?>
+                    </tbody>
+                </table>
+            </section>
         </main>
       
-      </body>
+        <footer>
+            <p>&copy; 2024 Manufacturing Dashboard</p>
+        </footer>
+    </body>
 </html>
+
+        
