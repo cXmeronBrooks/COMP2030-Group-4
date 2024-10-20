@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Login Page Manufacturing Dashboard</title>
-        <meta name="author" content="Group 4: Broo0488, [add your FANS]">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel = "stylesheet" href = "style.css">
-        <script src = "script.js"></script>
-    </head>
-    <body class="loginbody">
-        <section class="login">
-            <h1>Login</h1>
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password" id = "password">
-            <div class="show-password">
-                <input type="checkbox" id = "showPasswordCheckbox" onclick="ShowPassword()">
-                <label for="showPasswordCheckbox">Show Password</label>
-            </div>
-            <button class="SubmitLogin">Submit</button>
-        </section>
-    </body>
+  <head>
+    <title>Login Page Manufacturing Dashboard</title>
+    <meta name="author" content="Group 4: Broo0488, [add your FANS]" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.4.3/bcrypt.min.js"></script>
+    <script src="login.js"></script>
+    <!-- Linking external JS file -->
+  </head>
+  <body class="loginbody">
+    <section class="login">
+      <h1>Login</h1>
+      <input type="text" placeholder="Username" id="username" />
+      <input type="password" placeholder="Password" id="password" />
+      <div class="show-password">
+        <input
+          type="checkbox"
+          id="showPasswordCheckbox"
+          onclick="ShowPassword()"
+        />
+        <label for="showPasswordCheckbox">Show Password</label>
+      </div>
+      <button class="SubmitLogin" onclick="handleSubmit()">Submit</button>
+    </section>
+  </body>
 </html>
