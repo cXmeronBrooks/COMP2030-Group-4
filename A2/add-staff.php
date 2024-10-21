@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Add a new staff</h1>
-    <form method="GET" action="insert-staff.php">
+    <form class="right" method="GET" action="insert-staff.php">
         <input type="text" name="staff-name" placeholder="Enter the staff name" required /> <br>
         <input type="submit" value="Add Staff">
     </form>
