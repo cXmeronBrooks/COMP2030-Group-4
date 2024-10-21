@@ -58,10 +58,7 @@
                 }
             }
             ?>
-
-            <form method="post" action = "add-staff.php">
-                <input type="submit" value = "Add New Staff">
-            </form>
+                
         </section>
 
         <section class="right">
