@@ -9,7 +9,7 @@
 
         if(mysqli_stmt_execute($statement)){
             #Task updated successfully. return the user to index.php
-            header("Location: user.php");
+            header("Location: index_admin.php");
         }else{
             echo mysqli_error($conn);
         }
