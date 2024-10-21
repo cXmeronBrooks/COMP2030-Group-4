@@ -120,7 +120,7 @@
                     </thead>
                     <tbody>";
                     while ($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr class='info'>". 
+                        echo "<tr>". 
                             "<td>". $row["timestamp"] . "</td>" . 
                             "<td>" .$row["machine_name"] . "</td>" .
                             "<td>" .$row["temperature"]."</td>".
