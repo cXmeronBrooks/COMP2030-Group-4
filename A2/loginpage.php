@@ -9,7 +9,6 @@
         </head>
     <body class="loginbody">
         <section class="login">
-            <h2 class="deletelater">DELETE LATER: username1: 'admin' password1: 'banana' username2: 'worker' password2: 'ilikemoney' username3: 'manager' password3: apple</h2>
             <h1>Login</h1>
             <form action="loginpage.php" method="POST">
                 <input type="text" name="username" id = "username" placeholder="Username">
