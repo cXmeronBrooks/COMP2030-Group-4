@@ -1,0 +1,226 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .deletelater{
+    color: red;
+  }
+  .loginbody{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dropdown{
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown:hover .dropcontent{
+    display:block;
+  }
+  .dropcontent{
+    display:none;
+    position: absolute;
+  }
+  .dropcontent a{
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    padding: 10px;
+  }
+  .show-password {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: flex-start;
+  }
+
+  .show-password input[type="checkbox"] {
+      margin-right: 5px;
+  }
+
+  .SubmitLogin {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+  }
+
+  .login {
+    width: 300px;
+    padding: 30px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .login input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .SubmitLogin {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .SubmitLogin:hover {
+    background-color: darkblue;
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .search {
+    margin-bottom: 20px;
+  }
+  
+  .search input {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .metric {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .metric img {
+    width: 100%;
+  }
+
+  .back-button{
+    display: flex;
+    justify-content: center;
+  }
+
+  .back-button input[type="submit"]{
+    width: 20%;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.back-button input[type="submit"]:hover {
+    background-color: darkblue;
+}
+
+.main_update_body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.update_role {
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+}
+
+.update_address {
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+}
+
+.update_number {
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title_updatephp{
+  text-align: center;
+}
+
+.add_staff_body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_staff_section{
+    width: 300px;
+    padding: 30px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.bigfatbutton{
+    width: 30%;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
